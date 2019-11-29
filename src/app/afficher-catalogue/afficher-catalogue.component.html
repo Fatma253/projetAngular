@@ -1,0 +1,11 @@
+<h1>Liste des huiles</h1>
+<div>
+<ng-container *ngFor="let p of huiles">
+
+    Libellé: {{p.libelle}} <img [src]="p.image">
+    <button> <a [routerLink]="['/article', p.libelle]" > Détail</a> </button>
+
+</ng-container>
+
+</div>
+<button (click)="ajout()">ajouter</button>
